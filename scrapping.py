@@ -19,7 +19,7 @@ def saveInCSV(title,city,country,model,meterReading,fuelType,engine,autoManuel,p
     }
     dataframe = pd.DataFrame(data)
     # print(dataframe)
-    dataframe.to_csv('Scrap.csv',mode='a',index = False)
+    dataframe.to_csv('Scrap.csv',mode='a',index = False, header = False)
 
 def addEntities(data,title,city,country,model,meterReading,fuelType,engine,autoManuel,price,identity,contact):
     uls = data.find_all('ul' , class_ = 'list-unstyled search-results search-results-mid next-prev car-search-results')
@@ -132,7 +132,7 @@ for ul in uls:
         else:
             lastPage = 1
         
-        for i in range(2367,lastPage):
+        for i in range(2,lastPage):
             addEntities(data,title,city,country,model,meterReading,fuelType,engine,autoManuel,price,identity,contact)
             saveInCSV(title,city,country,model,meterReading,fuelType,engine,autoManuel,price,identity,contact)
             title = []
@@ -148,7 +148,7 @@ for ul in uls:
             contact = []
 
             print(i)
-        for i in range(2,lastPage):
+        
             h1 = data.find('h1')
             print(h1)
             #load and parsing
