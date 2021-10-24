@@ -848,7 +848,7 @@ border-radius: 30px;
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Manual Sorting</string>
+        <string>Manual Search</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -902,7 +902,7 @@ color: rgb(0, 0, 0);
 background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Sort</string>
+     <string>Search</string>
     </property>
    </widget>
   </widget>
