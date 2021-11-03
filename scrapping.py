@@ -5,6 +5,7 @@ import pandas as pd
 
 def saveInCSV(title,city,country,model,meterReading,fuelType,engine,autoManuel,price,identity,contact):
     data = {
+        
         'Title': title,
         'City':city,
         'Country':country,
